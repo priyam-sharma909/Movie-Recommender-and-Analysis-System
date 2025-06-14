@@ -5,7 +5,6 @@ from utilities import *
 st.set_page_config(page_title="Movie EDA", layout="wide")
 
 # Load and preprocess
-@st.cache_data
 def load_and_preprocess():
     df = load_data(r"C:\Users\Hp\OneDrive\Documents\project\movie_recommender_system\data\tmdb_5000_movies.csv")
     df['genres_parsed'] = parse_column(df, 'genres')
